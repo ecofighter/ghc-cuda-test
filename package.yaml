@@ -1,0 +1,29 @@
+name:                ghc-cuda-test
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/githubuser/ghc-cuda-test#readme
+license:             BSD3
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2018 Author name here
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - cuda >= 0.9.0.0 && < 1.0.0.0
+
+executables:
+  ghc-cuda-test:
+    source-dirs:      src
+    main:             Main.hs
+    extra-lib-dirs:
+    - lib
+    - /opt/cuda/lib64
+    - /usr/local/cuda/lib64
+    extra-libraries:
+    - cudacode
+    - cuda
+    - cudart
